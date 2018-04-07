@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package monitoring;
+
+
+service Metrics {
+    rpc HeartStatus(HeartRequest) returns (HeartResponse) {}
+}
+
+message HeartRequest {
+    string service = 1;
+}
+
+message HeartResponse {
+    string status = 1;
+}
